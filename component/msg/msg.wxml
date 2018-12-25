@@ -1,0 +1,13 @@
+<!-- 消息提示 -->
+<view class="x-msg-fix">
+	<view class="x-msg-main">
+		<view class="x-loading" animation="{{loading.animation}}">
+			<view class="x-loading-icon"></view>
+			<view class="x-loading-hint">{{ loading.msg }}</view>
+		</view>
+		<block wx:for="{{ msgs }}" wx:key="{{ item.id }}">
+			<!-- 消息提示 -->
+			<view animation="{{item.animation}}" class="x-msg x-msg-{{item.msgType}}">{{ item.msg }}</view>
+		</block>
+	</view>
+</view>

@@ -1,0 +1,81 @@
+.x-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99998;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.x-modal.show,
+.x-modal.out {
+    width: 100%;
+    height: 100%;
+}
+
+.x-modal .bg,
+.x-modal.out .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    transition: .3s;
+    opacity: 0;
+    z-index: 1;
+}
+
+.x-modal.shadeClose .bg {
+    pointer-events: auto;
+}
+
+.x-modal.block.shadeClose .x-modal-main {
+    pointer-events: none;
+}
+
+.x-modal.show .bg {
+    opacity: .8;
+}
+
+.x-modal-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.x-modal.table .x-modal-wrap {
+    display: table;
+}
+
+.x-modal.table .x-modal-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.x-modal.block .x-modal-wrap,
+.x-modal.block .x-modal-cell {
+    display: block;
+    height: 100%;
+}
+
+.x-modal.block .x-modal-main {
+    display: block;
+    height: 100%;
+    position: relative;
+}
+
+.x-modal .x-modal-main {
+    opacity: 0;
+    transition: all .5s;
+    transform: translate3d(0, 100rpx, 0);
+}
+
+.x-modal.show .x-modal-main {
+    pointer-events: auto;
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}

@@ -1,0 +1,7 @@
+<!-- 加载样式 -->
+<view class="x-loading">
+    <view class="shape shape1"></view>
+    <view class="shape shape2"></view>
+    <view class="shape shape3"></view>
+    <view class="shape shape4"></view>
+</view>

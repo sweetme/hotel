@@ -1,0 +1,11 @@
+<!-- 弹层对话框 -->
+<view class="x-modal {{ Layout }} {{ xClass }} {{ shadeClose?'shadeClose':'' }}" >
+    <view class="bg" style="background-color:{{ Background }}" catchtap="handleClose"></view>
+    <view class="x-modal-wrap">
+        <view class="x-modal-cell">
+            <view class="x-modal-main {{ xmClass }}">
+                <slot></slot>
+            </view>
+        </view>
+    </view>
+</view>

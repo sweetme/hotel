@@ -1,0 +1,281 @@
+.x-loading{
+    width: 60rpx;
+    height: 60rpx;
+    position: relative;
+    vertical-align:-20rpx;
+    display: inline-block;
+    animation: rotation 1s infinite;
+}
+
+.x-loading .shape {
+  position: absolute;
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 1px;
+}
+.x-loading .shape.shape1 {
+  left: 0;
+  background-color: #ffb400;
+}
+.x-loading .shape.shape2 {
+  right: 0;
+  background-color: #fe5f4b;
+}
+.x-loading .shape.shape3 {
+  bottom: 0;
+  background-color: #ff9f00;
+}
+.x-loading .shape.shape4 {
+  bottom: 0;
+  right: 0;
+  background-color: #f34a41;
+}
+.x-loading .shape1 {
+  border-top-left-radius: 20rpx;
+}
+.x-loading .shape2 {
+  border-top-right-radius: 20rpx;
+}
+.x-loading .shape3 {
+  border-bottom-left-radius: 20rpx;
+}
+.x-loading .shape4 {
+  border-bottom-right-radius: 20rpx;
+}
+
+.x-loading .shape1 {
+  -webkit-animation: shape1 0.5s ease 0s infinite alternate;
+          animation: shape1 0.5s ease 0s infinite alternate;
+}
+
+@-webkit-keyframes shape1 {
+  from {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  to {
+    -webkit-transform: translate(10rpx, 10rpx);
+            transform: translate(10rpx, 10rpx);
+  }
+}
+
+@keyframes shape1 {
+  from {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  to {
+    -webkit-transform: translate(10rpx, 10rpx);
+            transform: translate(10rpx, 10rpx);
+  }
+}
+.x-loading .shape2 {
+  -webkit-animation: shape2 0.5s ease 0s infinite alternate;
+          animation: shape2 0.5s ease 0s infinite alternate;
+}
+
+@-webkit-keyframes shape2 {
+  from {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  to {
+    -webkit-transform: translate(-10rpx, 10rpx);
+            transform: translate(-10rpx, 10rpx);
+  }
+}
+
+@keyframes shape2 {
+  from {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  to {
+    -webkit-transform: translate(-10rpx, 10rpx);
+            transform: translate(-10rpx, 10rpx);
+  }
+}
+.x-loading .shape3 {
+  -webkit-animation: shape3 0.5s ease 0s infinite alternate;
+          animation: shape3 0.5s ease 0s infinite alternate;
+}
+
+@-webkit-keyframes shape3 {
+  from {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  to {
+    -webkit-transform: translate(10rpx, -10rpx);
+            transform: translate(10rpx, -10rpx);
+  }
+}
+
+@keyframes shape3 {
+  from {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  to {
+    -webkit-transform: translate(10rpx, -10rpx);
+            transform: translate(10rpx, -10rpx);
+  }
+}
+.x-loading .shape4 {
+  -webkit-animation: shape4 0.5s ease 0s infinite alternate;
+          animation: shape4 0.5s ease 0s infinite alternate;
+}
+
+@-webkit-keyframes shape4 {
+  from {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  to {
+    -webkit-transform: translate(-10rpx, -10rpx);
+            transform: translate(-10rpx, -10rpx);
+  }
+}
+
+@keyframes shape4 {
+  from {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  to {
+    -webkit-transform: translate(-10rpx, -10rpx);
+            transform: translate(-10rpx, -10rpx);
+  }
+}
+
+
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+
+.z-loading{
+  display: inline-block;
+  vertical-align:middle;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+}
+.z-loading .x-outer{
+    border: 5px solid #fb4d38;
+    opacity: .9;
+    width: 20px;
+    height: 20px;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    border-width: 2px;
+    -webkit-animation: spin-right 0.5s linear infinite normal;
+    -moz-animation: spin-right 0.5s linear infinite normal;
+    -ms-animation: spin-right 0.5s linear infinite normal;
+    animation: spin-right 0.5s linear infinite normal;
+    -webkit-animation-delay: 0;
+    -moz-animation-delay: 0;
+    -o-animation-delay: 0;
+    animation-delay: 0;
+    margin: 0 auto;
+}
+.z-loading .x-inner {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border: 5px solid #fb4d38;
+    opacity: .9;
+    border-radius: 50%;
+    border-left-color: transparent;
+    border-width: 2px;
+    border-bottom-color: transparent;
+    position: relative;
+    top: -19px;
+    margin: 0 auto;
+    -webkit-animation: spin-left 0.5s linear infinite normal;
+    -moz-animation: spin-left 0.5s linear infinite normal;
+    -ms-animation: spin-left 0.5s linear infinite normal;
+    animation: spin-left 0.5s linear infinite normal;
+    -webkit-animation-delay: 0;
+    -moz-animation-delay: 0;
+    -o-animation-delay: 0;
+    animation-delay: 0;
+}
+
+@keyframes spin-right {
+  from {
+    transform: rotate(0deg);
+    opacity: 0.2;
+  }
+  50% {
+    transform: rotate(180deg);
+    opacity: 1.0;
+  }
+  to {
+    transform: rotate(360deg);
+    opacity: 0.2;
+  }
+}
+@-webkit-keyframes spin-right {
+  from {
+    -webkit-transform: rotate(0deg);
+    opacity: 0.2;
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+    opacity: 1.0;
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    opacity: 0.2;
+  }
+}
+@keyframes spin-left {
+  from {
+    transform: rotate(0deg);
+    opacity: 0.2;
+  }
+  50% {
+    transform: rotate(-180deg);
+    opacity: 1.0;
+  }
+  to {
+    transform: rotate(-360deg);
+    opacity: 0.2;
+  }
+}
+
+@-webkit-keyframes spin-left {
+  from {
+    -webkit-transform: rotate(0deg);
+    opacity: 0.2;
+  }
+  50% {
+    -webkit-transform: rotate(-180deg);
+    opacity: 1.0;
+  }
+  to {
+    -webkit-transform: rotate(-360deg);
+    opacity: 0.2;
+  }
+}
