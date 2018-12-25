@@ -28,8 +28,8 @@ export default {
     /**
      * 时间格式化
      *
-     * @time 时间
-     * @func 如果为函数 进一步自定义处理 否则为字符串格式 默认'Y-n-j H-i-s'
+     * @param {number} time - 时间
+     * @param {funciton} func 如果为函数 进一步自定义处理 否则为字符串格式 默认'Y-n-j H-i-s'
      */
     $TIMEFORMAT(time, func) {
         if (!time) {
@@ -65,8 +65,8 @@ export default {
     /**
      * GET请求
      *
-     * @url 地址
-     * @data 参数
+     * @param {string} url - 地址
+     * @param {object} data - 参数
      */
     $GET(url, data) {
         let d = {// 固定上传数据
@@ -94,11 +94,11 @@ export default {
         })
     },
     /**
- * POST请求
- *
- * @url 地址
- * @data 参数
- */
+     * POST请求
+     *
+     * @param {string} url - 地址
+     * @param {object} data - 参数
+    */
     $POST(url, data, type) {
         let d = {
             token: wx.getStorageSync('token') || '',
@@ -127,8 +127,8 @@ export default {
     },
     /**
      * 上传图片
-     * @count 规定上传总数
-     * @sourceType album 从相册选图，camera 使用相机，默认二者都有
+     * @param {number} count - 规定上传总数
+     * @param {string} sourceType - album 从相册选图，camera 使用相机，默认二者都有
      */
     $FILE(count, sourceType) {
         return new Promise((resolve, reject) => {
@@ -171,10 +171,10 @@ export default {
             })
         })
     },
-    /*
+    /**
     * 系统错误提示
     *
-    * @t 错误提示
+    * @param {string} t 错误提示
     */
     $ERROR(t) {
         wx.showToast({
@@ -183,10 +183,10 @@ export default {
             duration: 3000
         })
     },
-    /*
+    /**
      * 包装创建页面配置
      * 方便控制全局
-     * @config { Object } json格式页面配置
+     * @param { Object } config - json格式页面配置
     */
     $CREATE_PAGE(config = {}) {
         return Object.assign({

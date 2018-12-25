@@ -13,10 +13,10 @@ export default {
     /**
      * 消息提示
      *
-     * @options 选项 如果为string,就是消息内容
-     * @@msg 消息内容
-     * @@msgType default 黑框白字 success 绿框白字 error 红框白字 info 蓝框白字 warn 黄框白字 loading 正方形白底loading图标 默认为default
-     * @@time 显示时间
+     * @param {string, {}} options - 选项 如果为string,就是消息内容
+     * @param {string} msg - 消息内容
+     * @param {string} msgType - default 黑框白字 success 绿框白字 error 红框白字 info 蓝框白字 warn 黄框白字 loading 正方形白底loading图标 默认为default
+     * @param {number} time - 显示时间
      *
      */
     $Msg(options) {
