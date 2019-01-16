@@ -1,5 +1,6 @@
 {
     "usingComponents": {
-        "msg": "/component/msg/msg"
+        "msg": "/component/msg/msg",
+        "nav": "/component/nav/nav"
     }
 }

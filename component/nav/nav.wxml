@@ -1,0 +1,22 @@
+<view class="nav">
+    <view class="nav-item nav-item-current">
+        <image class="index-icon" src="/images/nav-index-checked.png"></image>
+        <view>首页</view>
+    </view>
+    <view class="nav-item">
+        <image class="hotel-icon" src="/images/nav-hotel-unchecked.png"></image>
+        <view>酒店</view>
+    </view>
+    <view class="nav-item">
+        <image class="food-icon" src="/images/nav-food-unchecked.png"></image>
+        <view>美食</view>
+    </view>
+    <view class="nav-item">
+        <image class="good-icon" src="/images/nav-good-unchecked.png"></image>
+        <view>商城</view>
+    </view>
+    <view class="nav-item">
+        <image class="personal-icon" src="/images/nav-personal-unchecked.png"></image>
+        <view>个人中心</view>
+    </view>
+</view>
