@@ -1,5 +1,13 @@
 {
   "pages":[
+    "pages/user/user",
+    "pages/food/food",
+    "pages/mall/mallInfo",
+    "pages/mall/mallPage",
+    "pages/food/foodPage",
+    "component/foodList/foodList",
+    "pages/mall/mall",
+    "pages/select/select",
     "pages/index/index"
   ],
   "window":{
