@@ -49,7 +49,7 @@
         <view class="user-item-name">发票抬头</view>
       </view>
       <view class='user-item-tag-box'>
-       <image class="user-item-tag"  src='{{img}}tag-right.png' mode="widthFix"></image>
+        <image class="user-item-tag"  src='{{img}}tag-right.png' mode="widthFix"></image>
       </view>
     </view>
     <view class='user-item flex-row space-between'>
@@ -58,7 +58,7 @@
         <view class="user-item-name">我的会员</view>
       </view>
       <view class='user-item-tag-box'>
-       <image class="user-item-tag"  src='{{img}}tag-right.png' mode="widthFix"></image>
+        <image class="user-item-tag"  src='{{img}}tag-right.png' mode="widthFix"></image>
       </view>
     </view>
     <view class='user-item flex-row space-between'>
@@ -67,9 +67,11 @@
         <view class="user-item-name">我要分享</view>
       </view>
       <view class='user-item-tag-box'>
-       <image class="user-item-tag"  src='{{img}}tag-right.png' mode="widthFix"></image>
+        <image class="user-item-tag"  src='{{img}}tag-right.png' mode="widthFix"></image>
       </view>      
     </view>
   </view>
 
 </view>
+
+<nav currentPage="tabprofile"></nav>

@@ -77,3 +77,4 @@
 </view>
 </scroll-view>
 
+<nav currentPage="tabfood"></nav>

@@ -1,18 +1,18 @@
 {
-  "pages":[
-    "pages/user/user",
-    "pages/food/food",
-    "pages/mall/mallInfo",
-    "pages/mall/mallPage",
-    "pages/food/foodPage",
-    "component/foodList/foodList",
-    "pages/mall/mall",
-    "pages/index/index"
+  "pages": [
+    "pages/tabindex/tabindex",
+    "pages/tabprofile/tabprofile",
+    "pages/tabfood/tabfood",
+    "pages/tabmall/tabmall",
+    "pages/mallInfo/mallInfo",
+    "pages/mallPage/mallPage",
+    "pages/foodPage/foodPage",
+    "component/foodList/foodList"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   }
 }

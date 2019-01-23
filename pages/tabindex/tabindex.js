@@ -8,14 +8,15 @@ Page(app.$CREATE_PAGE({
 	},
 	//事件处理函数
 	bindViewTap: function () {
-		wx.navigateTo({
-			url: '../logs/logs'
-		})
+		
 	},
 	onLoad: function () {
-		
+		app.$GETCTX('#modal').handleShow();
 	},
 	handleTest: function () {
 		app.$Msg('111');
+	},
+	handleClose: function () {
+		app.$GETCTX('#modal').handleClose();
 	}
 }))

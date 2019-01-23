@@ -1,0 +1,37 @@
+<!--index.wxml-->
+<view class="container">
+	<view class="slide-wrap">
+		<swiper class="slide"
+			indicator-dots 
+			indicator-color="rgba(255, 255, 255, 0.55)"
+			indicator-active-color="#fff">
+			<swiper-item class="slide-item">
+				<image src="/images/index.png"></image>
+			</swiper-item>
+			<swiper-item class="slide-item">
+				<image src="/images/index.png"></image>
+			</swiper-item>
+			<swiper-item class="slide-item">
+				<image src="/images/index.png"></image>
+			</swiper-item>
+			<swiper-item class="slide-item">
+				<image src="/images/index.png"></image>
+			</swiper-item>
+		</swiper>
+	</view>
+	<view class="position">
+		<view class="position-word">上海 虹口区 东大名路1171号近霍山路12号线提篮桥地铁站1号口（ 北外滩地区 外滩地区）</view>
+		<view>
+			<image src="/images/index-icon1.png"></image>
+		</view>
+	</view>
+</view>
+
+<msg id="msg" />
+<modal id="modal">
+	<view class="test">
+		这是一个测试弹窗
+		<icon type="cancel" color="#000" bindtap="handleClose"></icon>
+	</view>
+</modal>
+<nav />

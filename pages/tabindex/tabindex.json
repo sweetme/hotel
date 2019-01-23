@@ -1,6 +1,8 @@
 {
+    "navigationBarTitleText": "凯里宾馆",
     "usingComponents": {
         "msg": "/component/msg/msg",
+        "modal": "/component/modal/modal",
         "nav": "/component/nav/nav"
     }
 }

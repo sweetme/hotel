@@ -1,0 +1,175 @@
+/* pages/user/user.wxss */
+.contain-wrap{
+  background-color: #EFEFF7;
+  min-height: calc(100vh - 100rpx);
+}
+.user-box{
+  width: 100%;
+  padding: 20rpx 37rpx;
+  box-sizing: border-box;
+}
+.user-bg-top{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* height: 270rpx; */
+  overflow: hidden;
+}
+.bg-top{
+  width: 100%;
+}
+.user-info{
+  width: 100%;
+  background-color: #fff;
+  z-index: 2;
+  margin-top: 64rpx;
+  border-radius: 20rpx;
+  padding-bottom: 46rpx;
+}
+.user-bg-top-img{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.user-avatar-wrapper{
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 128rpx;
+  border: 6rpx solid #D8E9F8;
+  margin-top: -64rpx;
+  overflow: hidden;
+}
+.user-avatar{
+  width: 100%;
+}
+.user-tel{
+  width: 100%;
+  text-align: center;
+  margin: 100rpx 0 35rpx;
+  display: inline-block;
+}
+.user-type{
+  height: 46rpx;
+  line-height: 46rpx;
+  width: 176rpx;
+  background-color: #EFF6FB;
+  border-radius: 46rpx;
+  margin: 0 auto 30rpx;
+  box-sizing: border-box;
+  font-size: 0;
+}
+.user-type-icon{
+  width: 24rpx;
+  height: 24rpx;
+  vertical-align: middle;
+  display: inline-block;
+  margin-left: 20rpx;
+}
+.user-type-name{
+  color: #527AB2;
+  font-size: 24rpx;
+  vertical-align: middle;
+  display: inline-block;
+  line-height: 46rpx;
+  margin-left: 14rpx;
+}
+.user-signature{
+  font-size: 28rpx;
+  text-align: center;
+  color: #666666;
+  padding: 0 10rpx;
+}
+.user-order{
+  width: 100%;
+  background-color: #fff;
+  padding: 28rpx 37rpx;
+  box-sizing: border-box;
+}
+.order-title{
+  font-size: 0;
+  line-height: 30rpx;
+  padding-bottom: 26rpx;
+  border-bottom: 1rpx solid #E4E4E4;
+}
+.title{
+  font-size: 30rpx;
+  color:#424242;
+}
+.order-tag{
+  font-size: 0rpx;
+  color: #AFAFAF;
+  height: 30rpx;
+}
+.all-order{
+  font-size: 28rpx;
+  line-height: 30rpx;
+  height: 30rpx;
+  margin-right: 14rpx;
+}
+.item-tag{
+  width: 14rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  position: absolute;
+  right: 0;
+  top: 4rpx;
+}
+.all-order{
+  font-size: 28rpx;
+  padding-right: 10rpx;
+}
+.order-list{
+  width: 100%;
+}
+.order-item{
+  width: 100rpx;
+  text-align: center;
+  font-size: 0;
+}
+.order-item-icon{
+  width: 50rpx;
+  display: block;
+  margin: 30rpx auto 16rpx;
+}
+.order-item-name{
+  color: #666666;
+  display: inline-block;
+  font-size: 24rpx;
+}
+
+.user-list{
+  padding: 0rpx 37rpx;
+  background-color: #ffffff;
+  margin-top: 20rpx;
+  overflow: hidden;
+}
+.user-item{
+  line-height: 100rpx;
+  border-bottom: 1rpx solid #E4E4E4;
+}
+.user-item:last-child{
+  border:none;
+}
+.user-item-icon{
+  width: 32rpx;
+  vertical-align: middle;
+  margin-right: 20rpx;
+}
+.user-item-name{
+  display: inline-block;
+  font-size: 28rpx;
+  color: #424242;
+}
+.user-item-tag-box{
+  height: 100rpx;
+  width: 23rpx;
+}
+.user-item-tag{
+  display: inline-block;
+  vertical-align: middle;
+  width: 14rpx;
+  line-height: 100rpx;
+}

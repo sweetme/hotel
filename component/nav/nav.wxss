@@ -7,6 +7,8 @@
     height: 100rpx;
     border-top: 1rpx solid #efeff7;
     align-items: center;
+    background-color: #fff;
+    z-index: 10086;
 }
 
 .nav-item {

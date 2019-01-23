@@ -1,7 +1,0 @@
-<!--index.wxml-->
-<view class="container">
-	<view bindtap="handleTest">hello world!</view>
-</view>
-
-<msg id="msg" />
-<nav />

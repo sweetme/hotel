@@ -1,5 +1,7 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "nav": "/component/nav/nav"
+  },
   "navigationBarTitleText": "个人中心",
   "navigationBarBackgroundColor": "#4499FF",
   "navigationBarTextStyle": "#fff"

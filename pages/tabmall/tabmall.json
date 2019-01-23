@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "nav": "/component/nav/nav"
+  },
+  "navigationBarTitleText": "商城"
+}

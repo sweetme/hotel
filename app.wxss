@@ -1,78 +1,91 @@
 /**app.wxss**/
-.container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 200rpx 0;
-  box-sizing: border-box;
-} 
-
 /* 绝对垂直居中 */
 
 .absoult-vc {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
+
 /* 水平居中 */
-.absoult-c{
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%); 
+
+.absoult-c {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
+
 /* 垂直居中 */
-.absoult-v{
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%); 
+
+.absoult-v {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
+
 /* 弹性居中 */
-.center{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
 /* 弹性布局 */
-.flex-row{
-  display: flex;
-  flex-direction: row;
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
 }
+
 /* 左右布局 */
+
 .space-between {
-  justify-content: space-between;
+    justify-content: space-between;
 }
+
 /* 等间距布局 */
-.space-around{
-  justify-content: space-around;
+
+.space-around {
+    justify-content: space-around;
 }
+
 /* 不换行 */
-.nowrap{
-  flex-wrap: nowrap;
+
+.nowrap {
+    flex-wrap: nowrap;
 }
 
 /* 弹性自下而上 */
-.wrap-reverse{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+
+.wrap-reverse {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
+
 /* 超出隐藏 */
-.ellipsis{
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;  
+
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
-.ellipsis-2{
-  overflow : hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
+
+.ellipsis-2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
-.relative{
-  position: relative;
+
+.relative {
+    position: relative;
+}
+
+page {
+  padding-bottom: 100rpx;
 }
