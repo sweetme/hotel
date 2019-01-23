@@ -5,6 +5,7 @@ export default {
 
     },
     globalData: {
-        userInfo: null
+        userInfo: null,
+        imgSrc: '../../images/',
     }
 }
