@@ -7,7 +7,6 @@
     "pages/food/foodPage",
     "component/foodList/foodList",
     "pages/mall/mall",
-    "pages/select/select",
     "pages/index/index"
   ],
   "window":{
