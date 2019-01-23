@@ -1,0 +1,48 @@
+<template name="list">
+  <view class='food-list relative flex-row'>
+    <text class='apply-btn'>{{item.type}}</text>
+    <view class='food-img-wrapper relative'>
+      <image class='img-160' src="{{item.url}}" mode="widthFix"></image>
+    </view>
+    <view class='food-msg'>
+      <view class='food-name ellipsis'>{{item.name}}</view>
+      <view class='food-sell-num'>月销量{{item.num}}</view>
+      <view class='food-price-wrapper'> 
+        <text class='food-price-current main-color'>{{item.currentPrice}}</text>
+        <text class='food-discount main-color'>{{item.discount}}折</text>
+        <text class='food-price'>￥{{item.price}}</text>
+      </view>
+    </view>
+    <!-- <view class='select-num-wrapper flex-row absoult-v'>
+      <view class='food-reduce circle'><text class='absoult-vc'>-</text></view>
+      <view class='food-num relative'><text class="absoult-vc">1</text></view>
+      <view class='food-add circle'><text class='absoult-vc'>+</text></view>
+    </view> -->
+  </view>
+</template>
+
+<template name="commentList"> 
+  <view class='comment-list flex-row'>
+    <view class='avatar-wrapper flex-row'>
+      <image class='avatar' src="{{item.avatar}}" mode="widthFix"></image>
+    </view>
+    <view class='comment-content'>
+      <view class='comment-name-wrappper flex-row space-between'>
+        <text class='comment-name'>{{item.commentName}}</text>
+        <text class='comment-date'>{{item.commentDate}}</text>
+      </view>
+      <view class='comment-msg'>
+      <text>{{item.commentCon}}</text>
+      </view>
+      <view class='comment-imgs'>
+        <scroll-view class='imgs-list' scroll-x style="width: auto;overflow:hidden;">
+          <block wx:for="{{item.commentImgs}}" wx:key="" wx:for-item="cell">
+            <view class='imgs-item-wrapper'>
+              <image class='imgs-item' src="{{cell.url}}" mode="widthFix"></image>
+            </view>
+          </block>
+        </scroll-view>
+      </view>
+    </view>
+  </view>
+</template>
