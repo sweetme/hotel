@@ -15,7 +15,7 @@ Page(app.$CREATE_PAGE({
       { type: "预约", name: "农家小炒", num: "99", currentPrice: "16.8", discount: "6.6", price: "26", url: app.globalData.imgSrc + "demo.jpg", selectNum: 0 },
       { type: "预约", name: "农家小炒", num: "99", currentPrice: "16.8", discount: "6.6", price: "26", url: app.globalData.imgSrc + "demo.jpg", selectNum: 0 }
     ],
-    shopCart: [{ 'Cartid': '20', 'Cartnum': '1' }],
+    shopCart: [],
     sum:0,
     currentSum:0,
     isInfo:false,
@@ -34,25 +34,38 @@ Page(app.$CREATE_PAGE({
       })
     }
   },
-  add: function (event) {
-    let index = event.currentTarget.dataset.index
-    let data = this.data.data;
-    data[index].selectNum ++;
-    this.setData({
-      data: data
-    });
-    this.countNum("add");
+  initData: function () { // 数据初始化
+    wx.request({
+      url: request_getCategoryList,
+      data: {
+        "session3rd": userid,
+      },
+      success: function (res) {
+        that.setData({
+          cate: res.data.list
+        })
+      }
+    })
   },
-  reduce: function (event) {
-    let index = event.currentTarget.dataset.index;
-    let data = this.data.data;
-    data[index].selectNum--;
+  count:function(datas) { //获取组件传递的购物车统计
+    console.log(datas)
+    let data = datas.detail;
+    let sum = data.sum;
+    let currentSum = data.currentSum;
+    let info = data.info;
+    let foodList = datas.detail.data;
     this.setData({
-      data: data,
-    });
-    this.countNum("reduce");
+      sum: sum,
+      currentSum: currentSum,
+      data: foodList
+    })
+    if (info) { //美食详情
+      this.setData({
+        info: info
+      });
+    }
   },
-  countNum: function(type) {
+  countNum: function(type) { // 详情页触发购物车统计
     let data = this.data.data;
     let currentSum = 0;
     let sum = 0;
@@ -73,39 +86,29 @@ Page(app.$CREATE_PAGE({
     }
   
   },
-  toFixed: function (num){
+  toFixed: function (num){ //浮点数取值
     return parseFloat((num).toFixed(10))
   },
-  close: function (){
+  close: function (){ //关闭美食详情
     this.setData({
       isInfo: false
     })
   },
-  goInfo: function (event) {
-    let index = event.currentTarget.dataset.index;
-    let data = this.data.data;
-    let info = data[index];
-    this.setData({
-      isInfo: true,
-      info: info,
-      currentIndex: index
-    })
-  },
-  addNum: function() {
+  addNum: function() { // 详情页添加按钮
     let data = this.data.data;
     data[this.data.currentIndex].selectNum++;
     this.setData({
       data: data,
     });
-    this.countNum("add");
+    this.countNum();
   },
-  reduceNum: function () {
+  reduceNum: function () {// 详情页减少按钮
     let data = this.data.data;
     data[this.data.currentIndex].selectNum--;
     this.setData({
       data: data,
     });
-    this.countNum("reduce");
+    this.countNum();
   },
   lower: function (e) { // 列表上拉加载
     console.log(e)
@@ -113,20 +116,7 @@ Page(app.$CREATE_PAGE({
   loadComment: function (e) { // 评论上拉加载
     console.log(e)
   },
-  initData: function () {
-    wx.request({
-      url: request_getCategoryList,
-      data: {
-        "session3rd": userid,
-      },
-      success: function (res) {
-        that.setData({
-          cate: res.data.list
-        })
-      }
-    })
-  },
-  getShopCart: function () {
+  getShopCart: function () { // 购物车去结算
     let data = this.data.data;
     let cart = [];
     for (let i = 0; i < data.length; i++) {
@@ -137,6 +127,21 @@ Page(app.$CREATE_PAGE({
         cart.push(shopCart);
       }
     }
-    console.log(cart);
+    // console.log(cart);
+  },
+  detailTap: function (datas) { //详情页弹窗
+    let data = datas.detail;
+    this.setData({
+      isInfo: true,
+      info: data.info,
+      currentIndex: data.currentIndex,
+      data: data.data
+    })
+  },
+  upLoad: function () {//上拉加载列表
+    // console.log("upLoad")
+  },
+  loadComment: function () { //上拉加载评论
+    // console.log("loadComment")
   }
 }))

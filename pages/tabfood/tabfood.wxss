@@ -36,6 +36,7 @@
   z-index: 3;
   box-sizing: border-box;
   transform: translateY(100%);
+  opacity: 0;
 }
 .info-title-wrapper{
   width: 100%;

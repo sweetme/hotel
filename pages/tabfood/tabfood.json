@@ -1,6 +1,8 @@
 {
   "usingComponents": {
-    "nav": "/component/nav/nav"
+    "nav": "/component/nav/nav",
+    "list": "/component/list/list",
+    "commentList": "/component/commentList/commentList"
   },
   "navigationBarTitleText": "美食"
 }
