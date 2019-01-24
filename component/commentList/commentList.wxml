@@ -1,0 +1,29 @@
+<!--component/commentList/commentList.wxml-->
+<!-- 评论区 -->
+<scroll-view scroll-y style="height:270rpx" bindscrolltolower="loadComment" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+  <block  wx:for="{{commentList}}" wx:key="" wx:for-index="index" wx:for-item="item">
+    <view class='comment-list flex-row'>
+      <view class='avatar-wrapper flex-row'>
+        <image class='avatar' src="{{item.avatar}}" mode="widthFix"></image>
+      </view>
+      <view class='comment-content'>
+        <view class='comment-name-wrappper flex-row space-between'>
+          <text class='comment-name'>{{item.commentName}}</text>
+          <text class='comment-date'>{{item.commentDate}}</text>
+        </view>
+        <view class='comment-msg'>
+        <text>{{item.commentCon}}</text>
+        </view>
+        <view class='comment-imgs'>
+          <scroll-view class='imgs-list' scroll-x style="width: auto;overflow:hidden;">
+            <block wx:for="{{item.commentImgs}}" wx:key="" wx:for-item="cell">
+              <view class='imgs-item-wrapper'>
+                <image class='imgs-item' src="{{cell.url}}" mode="widthFix"></image>
+              </view>
+            </block>
+          </scroll-view>
+        </view>
+      </view>
+    </view>
+  </block>
+</scroll-view>

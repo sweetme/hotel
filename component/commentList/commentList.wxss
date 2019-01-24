@@ -1,0 +1,87 @@
+/* component/commentList/commentList.wxss */
+/* 评论区 */
+.comment-list{
+  margin-top: 30rpx;
+}
+.comment-title-wrapper{
+  line-height: 33rpx;
+}
+.comment-title{
+  font-size: 33rpx;
+  font-weight: bold;
+  color: #202020;
+}
+.comment-num{
+  font-size: 24rpx;
+  color: #9D9C98;
+}
+.avatar-wrapper{
+  width: 60rpx;
+  height: 60rpx;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.avatar{
+  width: 100%;
+}
+.comment-content{
+  padding: 10rpx 0 0 20rpx;
+  width: 610rpx;
+}
+.comment-name{
+  font-size: 24rpx;
+}
+.comment-date{
+   font-size: 18rpx;
+   color: #9D9C98;
+}
+.comment-msg{
+  font-size: 26rpx;
+  margin: 20rpx 0;
+}
+.comment-imgs{
+  width: 610rpx;
+  height: 130rpx;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.imgs-item-wrapper{
+  width: 130rpx;
+  height: 130rpx;
+  margin-right:10rpx; 
+  display: inline-block;
+}
+.imgs-item{
+  width: 100%;
+}
+
+/* public */
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.absoult-v {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.relative {
+    position: relative;
+}
+
+.food-list-wrapper{
+  border-bottom: 1px solid #E5E5EC;
+}
+
+.absoult-vc {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.space-between {
+    justify-content: space-between;
+}
