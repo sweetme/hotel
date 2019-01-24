@@ -1,34 +1,17 @@
 <!--pages/food/food.wxml-->
 <import src="../../component/foodList/foodList.wxml"/>
-<scroll-view scroll-y style="height:100vh;" bindscrolltolower="lower" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
-  <view class='content-wrapper'upper-threshold>
-    <block  wx:for="{{data}}" wx:key="" wx:for-index="index">
-      <view class='relative food-list-wrapper' bindtap='detailTap' data-id="{{index}}">
-        <template is="list" data="{{item}}"/>
-        <view class='select-num-wrapper flex-row absoult-v'>
-          <view class='food-reduce circle' catchtap='reduce' data-index="{{index}}" wx:if="{{item.selectNum>0}}">
-            <text class='absoult-vc' >-</text>
-          </view>
-          <view class='food-num relative' wx:if="{{item.selectNum>0}}">
-            <text class="absoult-vc" >{{item.selectNum}}</text>
-          </view>
-          <view class='food-add circle' catchtap='add' data-index="{{index}}">
-            <text class='absoult-vc'>+</text>
-          </view>
-        </view>
-      </view>
-    </block>
+<list currentPage="tabfood" data="{{ data }}" bind:detailTap="detailTap" bind:count="count" bind:upLoad="upLoad">
+</list>
+
+<!-- 美食购物车 -->
+<view class='shopping-car flex-row' wx:if="{{currentSum>0}}">
+  <view class='shopping-price-wrapper'>
+    <text class='shopping-current-price'>￥{{currentSum}}</text>
+    <text class='food-price shopping-price'>￥{{sum}}</text>
   </view>
-  <view class='shopping-car flex-row' wx:if="{{currentSum>0}}">
-    <view class='shopping-price-wrapper'>
-      <text class='shopping-current-price'>￥{{currentSum}}</text>
-      <text class='food-price shopping-price'>￥{{sum}}</text>
-    </view>
-    <view class='go-car'>
-      <text>去结算</text>
-    </view>
+  <view class='go-car' bindtap='getShopCart'>
+    <text>去结算</text>
   </view>
-  <view class='empty'>———— 没有更多了 ————</view>
-</scroll-view>
+</view>
 
 <nav currentPage="tabmall"></nav>

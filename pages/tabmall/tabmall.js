@@ -16,71 +16,54 @@ Page(app.$CREATE_PAGE({
       { type: "新品", name: "贵宾饮品", num: "99", currentPrice: "16.8", discount: "6.6", price: "26", url: app.globalData.imgSrc + "demo.jpg", selectNum: 0 }
     ],
     sum: 0,
-    currentSum: 0,
-    commentList: [
-      { id: 2, avatar: app.globalData.imgSrc + "demo.jpg", commentName: "小白", commentDate: "2019.01.02", commentCon: "味道不錯,很赞", commentImgs: [{ url: app.globalData.imgSrc + "demo.jpg" }, { url: app.globalData.imgSrc + "demo.jpg" }, { url: app.globalData.imgSrc + "demo.jpg" }, { url: app.globalData.imgSrc + "demo.jpg" }, { url: app.globalData.imgSrc + "demo.jpg" }, { url: app.globalData.imgSrc + "demo.jpg" }] },
-      { id: 2, avatar: app.globalData.imgSrc + "demo.jpg", commentName: "小白", commentDate: "2019.01.02", commentCon: "味道不錯,很赞", commentImgs: [{ url: app.globalData.imgSrc + "demo.jpg" }, { url: app.globalData.imgSrc + "demo.jpg" }, { url: app.globalData.imgSrc + "demo.jpg" }, { url: app.globalData.imgSrc + "demo.jpg" }, { url: app.globalData.imgSrc + "demo.jpg" }, { url: app.globalData.imgSrc + "demo.jpg" }] }
-    ]
+    currentSum: 0
   },
   onLoad: function (options) {
-    console.log(options.id)
-    this.setData({
-      id: options.id
-    })
+    if (options.id){
+      console.log(options.id)
+      this.setData({
+        id: options.id
+      })
+    }
   },
-  add: function (event) {
-    let index = event.currentTarget.dataset.index
+  getShopCart: function () { // 购物车去结算
     let data = this.data.data;
-    data[index].selectNum++;
-    this.setData({
-      data: data
-    });
-    this.countNum("add");
-  },
-  reduce: function (event) {
-    let index = event.currentTarget.dataset.index;
-    let data = this.data.data;
-    data[index].selectNum--;
-    this.setData({
-      data: data,
-    });
-    this.countNum("reduce");
-  },
-  countNum: function (type) {
-    let data = this.data.data;
-    let currentSum = 0;
-    let sum = 0;
+    let cart = [];
     for (let i = 0; i < data.length; i++) {
       if (data[i].selectNum > 0) {
-        sum += this.toFixed(data[i].selectNum * data[i].price);
-        currentSum += this.toFixed(data[i].selectNum * data[i].currentPrice);
+        let shopCart = {};
+        shopCart.Cartid = i;
+        shopCart.Cartnum = data[i].selectNum;
+        cart.push(shopCart);
       }
     }
-    if (type == "add") {
-      this.setData({
-        sum: this.toFixed(sum),
-        currentSum: this.toFixed(currentSum)
-      })
-    } else {
-      this.setData({
-        sum: this.toFixed(sum),
-        currentSum: this.toFixed(currentSum)
-      })
-    }
+    console.log(cart);
   },
-  toFixed: function (num) {
-    return parseFloat((num).toFixed(10))
+  count: function (datas) { //获取组件传递的购物车统计
+    console.log(datas)
+    let data = datas.detail;
+    let sum = data.sum;
+    let currentSum = data.currentSum;
+    let info = data.info;
+    let foodList = datas.detail.data;
+    this.setData({
+      sum: sum,
+      currentSum: currentSum,
+      data: foodList
+    })
+    
   },
-  detailTap: function (event) {
-    let postId = event.currentTarget.dataset.id;
+  detailTap: function (datas) { //详情页跳转
+    let data = datas.detail;
+    let postId = data.currentIndex;
     if (postId != "" || postId != undefined) {
       wx.setStorageSync('id', postId);//第一次点击之后存储数据在本地
       wx.navigateTo({
-        url: 'mallInfo?id=' + postId,
+        url: '../mallInfo/mallInfo?id=' + postId,
       })
     }
   },
-  lower: function (e) { // 下拉加载
-    console.log(e)
+  upLoad: function () {//上拉加载列表
+    console.log("upLoad")
   }
 }))
