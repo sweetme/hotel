@@ -1,0 +1,40 @@
+<!--component/list/list.wxml-->
+<view class='list'>
+  <scroll-view scroll-y style="height:100vh;" catchtouchmove="upLoad" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+    <view class='content-wrapper'upper-threshold>
+      <block  wx:for="{{ data }}" wx:key="" wx:for-index="index">
+        <view class='relative food-list-wrapper' bindtap='goInfo' data-index="{{index}}">
+            <!-- 列表页 -->
+           <view class='food-list relative flex-row'>
+              <text class='apply-btn'>{{ item.type }}</text>
+              <view class='food-img-wrapper relative'>
+                <image class='img-160' src="{{ item.url }}" mode="widthFix"></image>
+              </view>
+              <view class='food-msg'>
+                <view class='food-name ellipsis'>{{ item.name }}</view>
+                <view class='food-sell-num'>月销量{{ item.num }}</view>
+                <view class='food-price-wrapper'> 
+                  <text class='food-price-current main-color'>{{ item.currentPrice }}</text>
+                  <text class='food-discount main-color'>{{ item.discount }}折</text>
+                  <text class='food-price'>￥{{ item.price }}</text>
+                </view>
+              </view>
+            </view>
+            <!-- 添加按钮 -->
+            <view class='select-num-wrapper flex-row absoult-v'>
+              <view class='food-reduce circle' catchtap='reduce' data-index="{{index}}" wx:if="{{item.selectNum>0}}">
+                <text class='absoult-vc' >-</text>
+              </view>
+              <view class='food-num relative' wx:if="{{item.selectNum>0}}">
+                <text class="absoult-vc" >{{item.selectNum}}</text>
+              </view>
+              <view class='food-add circle' catchtap='add' data-index="{{index}}">
+                <text class='absoult-vc'>+</text>
+              </view>
+            </view>
+        </view>
+       
+      </block>
+    </view>
+  </scroll-view>
+</view>
