@@ -1,0 +1,58 @@
+<list currentPage="tabfood" data="{{ data }}" bind:detailTap="detailTap" bind:count="count" bind:upLoad="upLoad">
+</list>
+
+
+<!-- 美食详情页弹窗 -->
+<view class='shadow {{ isInfo ? "fadebg_in" : "" }}'  wx:if="{{ isInfo }}" bindtap='close'></view>
+<view class='info-wrapper {{ isInfo ? "fade_bottom_out" : "fade_bottom_in" }}' >
+  <view class='info-title-wrapper flex-row space-between'>
+    <text class='info-title'>详情</text>
+    <view class='info-close' bindtap='close'>
+      <image class='close-icon' src="{{ img }}close-icon.png" mode="widthFix"></image>
+    </view>
+  </view>
+  <view class='info-face-wrapper relative'>
+    <image class='info-face absoult-vc' src="{{ info.url }}" mode="widthFix"></image>
+  </view>
+  <view class='info-content-wrapper'>
+    <view class='info-name'><text>{{ info.name }}</text></view>
+    <view class='info-sell-num'>
+      <text class='sell-num'>月销量 {{ info.num }}</text>
+      <text>好评度 98%</text>
+    </view>
+    <view class='info-price-wrapper relative'>
+      <text class='info-currentPrice'>{{ info.currentPrice }}</text>
+      <text class='info-price food-price'>{{ info.price }}</text>
+      <view class='select-num-wrapper flex-row absoult-v select-num-wrapper-right'>
+        <view class='food-reduce circle' bindtap='reduceNum' wx:if="{{ info.selectNum > 0 }}">
+          <text class='absoult-vc' >-</text>
+        </view>
+        <view class='food-num relative' wx:if="{{ info.selectNum > 0 }}">
+          <text class="absoult-vc" >{{ info.selectNum }}</text>
+        </view>
+        <view class='food-add circle' bindtap='addNum'>
+          <text class='absoult-vc'>+</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='comment-wrapper'>
+    <view class='comment-title-wrapper flex-row space-between'>
+      <text class='comment-title'>评价</text>
+      <text class='comment-num'>{{ commentList.length }}条评论</text>
+    </view>
+    <commentList commentList="{{ commentList }}" bind:loadComment="loadComment"></commentList>
+  </view>
+</view>
+
+<!-- 美食购物车 --> 
+<view class='shopping-car flex-row' wx:if="{{ currentSum > 0 }}">
+  <view class='shopping-price-wrapper'>
+    <text class='shopping-current-price'>￥{{ currentSum }}</text>
+    <text class='food-price shopping-price'>￥{{ sum }}</text>
+  </view>
+  <view class='go-car' bindtap='getShopCart'>
+    <text>去结算</text>
+  </view>
+</view>
+<nav currentPage="tabfood"></nav>

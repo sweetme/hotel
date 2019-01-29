@@ -5,9 +5,8 @@
     "pages/tabfood/tabfood",
     "pages/tabmall/tabmall",
     "pages/mallInfo/mallInfo",
-    "pages/mallPage/mallPage",
-    "pages/foodPage/foodPage",
-    "component/foodList/foodList"
+    "pages/mallList/mallList",
+    "pages/foodList/foodList"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,43 +1,43 @@
 <!--pages/mall/mallInfo.wxml-->
 <import src="../../component/foodList/foodList.wxml"/>
-<scroll-view scroll-y style="height:100vh;" bindscrolltolower="lower" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+<scroll-view scroll-y style="height:100vh;" bindscrolltolower="lower" scroll-into-view="{{ toView }}" scroll-top="{{ scrollTop }}">
   <view class='content-wrapper' upper-threshold>
     <view class='banner relative'>
-      <view class="tc absoult-vc" wx:if="{{isshowVideo}}">
-        <video id="myVideo" src="{{videoSrc}}" binderror="videoErrorCallback" enable-danmu danmu-btn controls></video>
+      <view class="tc absoult-vc" wx:if="{{ isshowVideo }}">
+        <video id="myVideo" src="{{ videoSrc }}" binderror="videoErrorCallback" enable-danmu danmu-btn controls></video>
       </view>
       <image class='star-btn absoult-vc' src='{{img}}video-icon.png' catchtap='bindPlay'></image>
       <view class='check-type absoult-c'>
         <text class='video-btn' catchtap='showVideo'>视频</text>
         <text class='img-btn' catchtap='showImg'>图片</text>
       </view>
-      <image class='banner-bg absoult-vc' src='{{info.banner}}' mode="widthFix"></image>
+      <image class='banner-bg absoult-vc' src='{{ info.banner }}' mode="widthFix"></image>
     </view>
     <view class='mall-info'>
       <view class='mall-name ellipsis-2'>
-        <text>{{info.name}}</text>
+        <text>{{ info.name }}</text>
       </view>
       <view class='mall-price-wrapper'>
         <text>原价：</text>
-        <text class='mall-price relative'>￥{{info.price}}</text>
+        <text class='mall-price relative'>￥{{ info.price }}</text>
       </view>
       <view class='mall-content flex-row space-between'>
         <view class='mall-currentPrice'>
           <text>会员价：</text>
-          <text class='mall-currentPrice-num'>￥{{info.currentPrice}}</text>
+          <text class='mall-currentPrice-num'>￥{{ info.currentPrice }}</text>
         </view>
         <view>
           <view class='mall-sell-num'>
-            <text class='sell-num'>月销量 {{info.sellNum}}</text>
-            <text>好评度 {{info.rating}}</text>
+            <text class='sell-num'>月销量 {{ info.sellNum }}</text>
+            <text>好评度 {{ info.rating }}</text>
           </view>
         </view>
       </view>
       <view class='mall-certificate flex-row'>
-        <block  wx:for="{{info.certificate}}" wx:key="" wx:for-item="item">
+        <block  wx:for="{{ info.certificate }}" wx:key="" wx:for-item="item">
           <view class='certificate'>
-            <image class='certificate-icon' src="{{img}}certification-icon.png"  mode="widthFix"></image>
-            <text class='certificate-name'>{{item}}</text>
+            <image class='certificate-icon' src="{{ img }}certification-icon.png"  mode="widthFix"></image>
+            <text class='certificate-name'>{{ item }}</text>
           </view>
         </block>
       </view>
@@ -46,8 +46,8 @@
           <text>品种</text> 
         </view>
         <view class='varieties-list'>
-          <block  wx:for="{{info.varieties}}" wx:key="" wx:for-item="item" wx:for-index="index">
-            <text class='varieties-item {{varietiesIndex==index?"varieties-active":""}}' data-index="{{index}}" bindtap='varietiesSelect'>{{item}}</text>
+          <block  wx:for="{{ info.varieties }}" wx:key="" wx:for-item="item" wx:for-index="index">
+            <text class='varieties-item {{ varietiesIndex == index ? "varieties-active" : "" }}' data-index="{{ index }}" bindtap='varietiesSelect'>{{item}}</text>
           </block>
         </view>
       </view>
@@ -57,13 +57,13 @@
         </view>
         <!-- 增减按钮 -->
         <view class='select-num-wrapper flex-row absoult-v'>
-          <view class='food-reduce circle' catchtap='reduceNum' data-index="{{index}}" wx:if="{{info.selectNum>0}}">
+          <view class='food-reduce circle' catchtap='reduceNum' data-index="{{ index }}" wx:if="{{ info.selectNum > 0 }}">
             <text class='absoult-vc' >-</text>
           </view>
-          <view class='food-num relative' wx:if="{{info.selectNum>0}}">
-            <text class="absoult-vc" >{{info.selectNum}}</text>
+          <view class='food-num relative' wx:if="{{ info.selectNum > 0 }}">
+            <text class="absoult-vc" >{{ info.selectNum }}</text>
           </view>
-          <view class='food-add circle' catchtap='addNum' data-index="{{index}}">
+          <view class='food-add circle' catchtap='addNum' data-index="{{ index }}">
             <text class='absoult-vc'>+</text>
           </view>
         </view>
@@ -78,14 +78,14 @@
     <view class='address-content ' bindtap='chooseAddress'>
       <text class='tag-right'>></text>
       <view class='address-con '>
-        <image class='address-icon' src="{{img}}address-icon.png" mode='widthFix'></image>
-        <text class='province'>{{info.address.province}}</text>
-        <text class='city'>{{info.address.city}}</text>
-        <text class='country'>{{info.address.country}}</text>
+        <image class='address-icon' src="{{ img }}address-icon.png" mode='widthFix'></image>
+        <text class='province'>{{ info.address.province }}</text>
+        <text class='city'>{{ info.address.city }}</text>
+        <text class='country'>{{ info.address.country }}</text>
       </view>
       <view class='address-distance'>
-        <text class='mall-state'>{{info.sellState}}</text>
-        <text class='mall-distance'>，预计{{info.sellDistance}}送达</text>
+        <text class='mall-state'>{{ info.sellState }}</text>
+        <text class='mall-distance'>，预计{{ info.sellDistance }}送达</text>
     </view>
     </view>
   </view>
@@ -95,7 +95,7 @@
       <text>重量</text> 
     </view>
     <view class='param-weight'>
-      <text>{{info.param.weight}}</text>
+      <text>{{ info.param.weight }}</text>
     </view>
   </view>
 
@@ -104,17 +104,17 @@
   <view class='comment-wrapper'>
     <view class='comment-title-wrapper flex-row space-between'>
       <text class='comment-title'>评价</text>
-      <text class='comment-num'>{{commentList.length}}条评论</text>
+      <text class='comment-num'>{{ commentList.length }}条评论</text>
     </view>
-    <block  wx:for="{{commentList}}" wx:key="" wx:for-index="index" wx:for-item="item">
-      <template is="commentList" data="{{item}}"/>
+    <block  wx:for="{{ commentList }}" wx:key="" wx:for-index="index" wx:for-item="item">
+      <template is="commentList" data="{{ item }}"/>
     </block>
   </view>
   <view class='line-box line-box-120'></view>
   <view class='nav flex-row'>
     <view class='nav-price'>
-      <text class='price-sum'>{{currentSum}}</text>
-      <text class='price-discount'>已优惠 {{disCount}}</text>
+      <text class='price-sum'>{{ currentSum }}</text>
+      <text class='price-discount'>已优惠 {{ disCount }}</text>
     </view>
     <view class='nav-purches'>
       <text>立即购买</text>

@@ -1,16 +1,16 @@
 <view class='contain-wrap'>
   <view class='user-box relative'>
     <view class='user-bg-top'>
-      <image class='bg-top' src='{{img}}bg-top.png' mode="widthFix"></image>
+      <image class='bg-top' src='{{ img }}bg-top.png' mode="widthFix"></image>
     </view>
     <view class='user-info relative'>
-      <image class='user-bg-top-img' src='{{img}}userBgTop.png' mode="widthFix"></image>
+      <image class='user-bg-top-img' src='{{ img }}userBgTop.png' mode="widthFix"></image>
       <view class='user-avatar-wrapper absoult-c'>
-        <image class='user-avatar' src='{{img}}avatar.png' mode="widthFix"></image>
+        <image class='user-avatar' src='{{ img }}avatar.png' mode="widthFix"></image>
       </view>
       <view class='user-tel'>136****8018</view>
       <view class='user-type'>
-        <image class="user-type-icon" src='{{img}}level-icon.png' mode="widthFix"></image>
+        <image class="user-type-icon" src='{{ img }}level-icon.png' mode="widthFix"></image>
         <text class='user-type-name'>初级会员</text>
       </view>
       <view class='user-signature ellipsis'>凯里宾馆有一种家的归宿感，是心停泊的港湾</view>
@@ -22,20 +22,20 @@
       <view class='order-tag'>
         <text class='all-order'>全部订单</text>
         <!-- <text class='item-tag'>></text> -->
-        <image class="item-tag"  src='{{img}}tag-right.png' mode="widthFix"></image>
+        <image class="item-tag"  src='{{ img }}tag-right.png' mode="widthFix"></image>
       </view>
     </view>
     <view class='order-list flex-row space-around'>
       <view class='order-item'>
-        <image class='order-item-icon' src='{{img}}order0.png' mode="widthFix"></image>
+        <image class='order-item-icon' src='{{ img }}order0.png' mode="widthFix"></image>
         <text class='order-item-name'>待付款</text>
       </view>
       <view class='order-item'>
-        <image class='order-item-icon' src='{{img}}order1.png' mode="widthFix"></image>
+        <image class='order-item-icon' src='{{ img }}order1.png' mode="widthFix"></image>
         <text class='order-item-name'>已付款</text>
       </view>
       <view class='order-item'>
-        <image class='order-item-icon' src='{{img}}order2.png' mode="widthFix"></image>
+        <image class='order-item-icon' src='{{ img }}order2.png' mode="widthFix"></image>
         <text class='order-item-name'>已完成</text>
       </view>
     </view>
