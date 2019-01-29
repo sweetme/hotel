@@ -1,7 +1,0 @@
-{
-  "usingComponents": {
-    "nav": "/component/nav/nav",
-    "list": "/component/list/list"
-  },
-  "navigationBarTitleText": "商城"
-}
